@@ -1,18 +1,26 @@
 import React, { Component } from "react";
 import { url } from "inspector";
+import PropTypes from "prop-types";
 
 class Contact extends Component {
   render() {
+    const { name, phone, email } = this.props;
     return (
       <div>
-        <h4>John Doe</h4>
+        <h4>{name}</h4>
         <ul>
-          <li>Email:jdoe@gmail.com</li>
-          <li>Phone: 555-555-555</li>
+          <li>{email}</li>
+          <li>{phone}</li>
         </ul>
       </div>
     );
   }
 }
+
+Contact.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired
+};
 
 export default Contact;
