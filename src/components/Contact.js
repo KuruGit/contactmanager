@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { url } from "inspector";
 import PropTypes from "prop-types";
 
 class Contact extends Component {
